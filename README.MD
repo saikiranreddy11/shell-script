@@ -1,0 +1,1 @@
+This is the practice to learn the shell script and git
