@@ -19,7 +19,7 @@ then
     exit 10
 fi
 
-yum install mysql -y
+yum install mysqlll -y
 
 validate $? "Installing SQL"
 
