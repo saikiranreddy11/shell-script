@@ -1,7 +1,8 @@
 #!bin/bash
 id=$(id -u)
 DATE=$(date +%F-%H-%M-%S)
-logfile=/tmp/$0-DATE
+script-name=$0
+logfile=/tmp/script-name-$DATE.log
 
 validate(){
 
