@@ -25,4 +25,4 @@ validate $? "Installing SQL"
 
 yum install postfix -y
 
-validate $? ""Installing postfix"
+validate $? "Installing postfix"
