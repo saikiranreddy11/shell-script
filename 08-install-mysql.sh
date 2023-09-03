@@ -22,10 +22,10 @@ then
     exit 10
 fi
 
-yum install mysql -y>>logfile
+yum install mysql -y>>$logfile
 
 validate $? "Installing SQL"
 
-yum install postfix -y>>logfile
+yum install postfix -y>>$logfile
 
 validate $? "Installing postfix"
