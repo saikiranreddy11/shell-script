@@ -1,6 +1,18 @@
 #!bin/bash
 id=$(id -u)
 
+validate(){
+
+if [ $1 -ne 0 ]
+then 
+    echo "installation is not successfull"
+    exit 1
+else 
+    echo "installations is successfull"
+fi
+}
+
+
 if [ $id -ne 0 ]
 then
     echo "you dont have the permissions to instll"
@@ -9,20 +21,8 @@ fi
 
 yum install mysql -y
 
-if [ $? -ne 0 ]
-then 
-    echo "installation is not successfull"
-    exit 1
-else 
-    echo "installations is successfull"
-fi
+validate $?
 
 yum install postfix -y
 
-if [ $? -ne 0 ]
-then 
-    echo "postfix installation is not successfull"
-    exit 1
-else 
-    echo " postfixinstallations is successfull"
-fi
+validate $?
