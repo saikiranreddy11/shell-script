@@ -16,3 +16,13 @@ then
 else 
     echo "installations is successfull"
 fi
+
+yum install postfix -y
+
+if [ $? -ne 0 ]
+then 
+    echo "postfix installation is not successfull"
+    exit 1
+else 
+    echo " postfixinstallations is successfull"
+fi
