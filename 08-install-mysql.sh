@@ -1,5 +1,7 @@
 #!bin/bash
 id=$(id -u)
+DATE=$(date +%F-%H-%M-%S)
+logfile=/tmp/$0-DATE
 
 validate(){
 
@@ -19,10 +21,10 @@ then
     exit 10
 fi
 
-yum install mysqlll -y
+yum install mysql -y>>logfile
 
 validate $? "Installing SQL"
 
-yum install postfix -y
+yum install postfix -y>>logfile
 
 validate $? "Installing postfix"
