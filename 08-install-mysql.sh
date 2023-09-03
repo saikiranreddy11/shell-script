@@ -23,6 +23,6 @@ yum install mysql -y
 
 validate $?
 
-yum install postfix -y
+yum install pstfix -y
 
 validate $?
