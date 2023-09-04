@@ -10,4 +10,4 @@ do
     echo "deleting $line" &>>$logfiles
 
 
-done <<<files_to_be_deleted
+done <<<$files_to_be_deleted
