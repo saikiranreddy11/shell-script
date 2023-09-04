@@ -10,12 +10,19 @@ then
     exit 1
 fi
 
+
+
+
 for i in $@
 do
-    yum install $i -y
+    sudo yum list installed $i
+    if [ $? -ne 0 ]
+    then
+        echo "$i is not installed ,so installing it"
+        yum install $i -y
+    else
+        echo "$i is already installed"
+    fi
+
 done
 
-
-
-
-sudo yum list installed
