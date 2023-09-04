@@ -3,7 +3,7 @@
 id=$(id -u)
 R="\e[31m"
 N="\e[0m"
-date=$(date +%F+%H+%M+%S)
+date=$(date +%F-%H-%M-%S)
 script_name=$0
 logfiles=/home/centos/shell-script-logs/$script_name-$date.log
 if [ $id -ne 0 ]
@@ -17,7 +17,7 @@ fi
 
 for i in $@
 do
-    sudo yum list installed $i>>logfiles
+    sudo yum list installed $i>>$logfiles
     if [ $? -ne 0 ]
     then
         echo "$i is not installed ,so installing it"
