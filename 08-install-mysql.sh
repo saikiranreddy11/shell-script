@@ -22,7 +22,7 @@ then
     exit 10
 fi
 
-yum install mysqql -y>>$logfile
+yum install mysql -y>>$logfile
 
 validate $? "Installing SQL"
 
