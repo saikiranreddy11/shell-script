@@ -6,8 +6,7 @@ N="\e[0m"
 Y="\e[33m"
 date=$(date +%F-%H-%M-%S)
 script_name=$0
-logfiles=/home/centos/shell-script-logs/$script_name-$date.log
-validation 
+logfiles=/home/centos/shell-script-logs/$script_name-$date.log 
 if [ $id -ne 0 ]
 then
     echo -e "$R ERROR: $N you do not have the sudo access, please install with root access"
