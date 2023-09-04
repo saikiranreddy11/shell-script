@@ -21,6 +21,7 @@ validate(){
         exit 1
     else 
         echo "$Y $1 is installed successfully"
+    fi
 }
 
 
