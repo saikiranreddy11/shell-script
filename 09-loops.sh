@@ -15,12 +15,12 @@ then
 fi
 
 validate(){
-    if [ $? -ne 0]
+    if [ $? -ne 0 ]
     then
         echo "$R there is a problem installing the $1, please check$N"
         exit 1
     else 
-        echo "$Y $1 is installed successfully"
+        echo -e "$Y $1 is installed successfully"
     fi
 }
 
