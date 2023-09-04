@@ -8,7 +8,7 @@ files_to_be_deleted=$(find /home/centos/shell-script-logs -type f -name "*.log" 
 while read line
 do 
     echo "deleting $line" &>>$logfiles
-    rm -rf $line 
+    rm -f $line 
 
 
 done <<<$files_to_be_deleted
