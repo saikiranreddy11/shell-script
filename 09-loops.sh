@@ -6,7 +6,7 @@ N="\e[0m"
 
 if [ $id -ne 0 ]
 then
-    echo "$R ERROR: $N you do not have the sudo access, please install with root access"
+    echo -e "$R ERROR: $N you do not have the sudo access, please install with root access"
     exit 1
 fi
 
