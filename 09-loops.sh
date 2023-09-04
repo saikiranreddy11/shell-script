@@ -17,7 +17,7 @@ fi
 validate(){
     if [ $? -ne 0 ]
     then
-        echo "$R there is a problem installing the $1, please check$N"
+        echo -e "$R there is a problem installing the $1, please check$N"
         exit 1
     else 
         echo -e "$Y $1 is installed successfully"
