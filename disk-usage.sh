@@ -11,6 +11,7 @@ do
         partition=$(echo $line |awk -F ' ' '{print $1}') 
         message=$(echo "High Disk usage on $partition: $usage")
         echo "$message"
+        echo "$message $(date)" | mail -s "High Disk Usage" saikiransudhireddy@gmail.com
     fi
 done <<<$disk_usage
 
