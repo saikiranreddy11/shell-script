@@ -15,4 +15,6 @@ do
 done <<<$disk_usage
 
 echo -e "$message"
-echo "$message $(date)" | mail -s "High Disk Usage" saikiransudhireddy@gmail.com
+#echo "$message $(date)" | mail -s "High Disk Usage" saikiransudhireddy@gmail.com
+
+sh mail.sh saikiransudhireddy@gmail.com "Higg Disk Usage" "$message" "DEVOPS TEAM" "High Disk Usage"
