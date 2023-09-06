@@ -8,4 +8,5 @@ do
     if [$line -gt 1]
     then
         echo "High Disk usage $line"
+    fi
 done <<<$disk_usage
