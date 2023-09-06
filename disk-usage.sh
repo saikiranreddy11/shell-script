@@ -2,7 +2,7 @@
 
 disk_usage=$( df -hT | grep -vE 'tmpfs|Filesystem' )
 
-disk_threshold=1
+disk_threshold=10
 while IFS= read line
 do 
     usage=$(echo $line | awk -F ' ' '{print $6}' | cut -d '%' -f1)
