@@ -11,5 +11,5 @@ ALERT_TYPE=$5
 FINAL_BODY=$(sed -e "s/TEAM_NAME/$4/g" -e "s/ALERT_TYPE/$5/g" -e "s/MESSAGE/$BODY/g" template.html)
 
 echo "all args: $@"
-echo "$FINAL_BODY" | mail -s "$SUBJECT" saikiransudhireddy@gmail.com
+echo "$FINAL_BODY" | mail -s $(echo -e "$SUBJECT\nContent-Type: text/html") $TO_ADDRESS
 
