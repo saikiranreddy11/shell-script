@@ -7,7 +7,8 @@ BODY=$3
 TEAM_NAME=$4
 ALERT_TYPE=$5
 
-FINAL_BODY=sed -e 's/TEAM_NAME/DevOps Team/g' -e "s/ALERT_TYPE/$5/g" -e "s/MESSAGE/$BODY/g"
+FINAL_BODY=$(sed -e 's/TEAM_NAME/DevOps Team/g' -e "s/ALERT_TYPE/$5/g" -e "s/MESSAGE/$BODY/g")
 
 echo "all args: $@"
 echo "$FINAL_BODY" | mail -s "$SUBJECT" saikiransudhireddy@gmail.com
+
